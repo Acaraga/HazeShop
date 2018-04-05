@@ -3,6 +3,14 @@
 	{
 		"selected_items":
 		[
+			[
+				"a",
+				"attr"
+			],
+			[
+				"fun",
+				"function"
+			]
 		]
 	},
 	"buffers":
@@ -11,7 +19,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 8048,
+				"buffer_size": 10701,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -104,15 +112,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8048,
+						"buffer_size": 10701,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								766,
+								766
 							]
 						],
 						"settings":
@@ -124,7 +132,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -159,7 +167,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -193,7 +201,7 @@
 		"cols":
 		[
 			0.0,
-			0.5,
+			0.722426242525,
 			1.0
 		],
 		"rows":
@@ -241,7 +249,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},
@@ -249,7 +257,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 150.0,
+	"side_bar_width": 79.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

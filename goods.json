@@ -1,0 +1,27 @@
+{
+	"123001" : {
+		"name": "HAZE Legend - дедОК",
+		"conc1":"3 мг",
+		"vol1": "30 мл",
+		"cost1": "190 Р.",
+		"order": 1,
+		"img": "dedok.png"
+	},
+	"123002" : {
+		"name": "HAZE Legend - дедОК2",
+		"conc1":"3 мг",
+		"vol1": "30 мл",
+		"cost1": "190 Р.",
+		"order": 2,
+		"img": "dedok.png"
+	},
+	"123003" : {
+		"name": "HAZE Legend - дедОК3",
+		"conc1":"3 мг",
+		"vol1": "30 мл",
+		"cost1": "190 Р.",
+		"order": 3,
+		"img": "dedok.png"
+	},
+
+}
