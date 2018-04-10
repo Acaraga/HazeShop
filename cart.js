@@ -1,8 +1,9 @@
-$(document).ready(function () {
+$(document).ready(function() {
     console.log('===================');
     var jdata = loadJData('jdata');
     console.log(jdata);
-   loadCart();
+    loadCart();
+    $('.send-email').on('click', sendEmail);
 });
 var cart = {};
 
@@ -12,39 +13,40 @@ function loadCart() {
     if (localStorage.getItem('cart')) {
         // если есть - расширфровываю и записываю в переменную cart
         cart = JSON.parse(localStorage.getItem('cart'));
-            showCart();
-        }
-    else {
+        showCart();
+    } else {
         $('.main-cart').html('Корзина пуста!');
     }
 }
 
 function showCart() {
     //вывод корзины
-        console.log('Showcart');
-     if (!isEmpty(cart)) {
-         $('.main-cart').html('Корзина пуста!');
-     }
-     else {
+    console.log('Showcart');
+    if (!isEmpty(cart)) {
+        $('.main-cart').html('Корзина пуста!');
+    } else {
         //$.getJSON('goods.json', function (data) {
-            var goods = loadJData ('jdata');
-            console.log(goods);
-            var out = '<h1>Корзина</h1>';
-            for (var id in cart) {
-                out += `<button data-id="${id}" class="del-goods">x</button>`;
-                out += `<img src="img/${goods[id].img}">`;
-                out += ` ${goods[id].name  } : `;
-                out += `<button data-id="${id}" class="dec-goods">-</button> ${cart[id]  }`;
-                out += `<button data-id="${id}" class="inc-goods">+</button> <br>`;
-            }
-            out += '-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=- <br>'
-            out += '<a href=".">На главную</a>'
+        var goods = loadJData('jdata');
+        console.log(goods);
+        var out = '<h1>Корзина</h1>';
+        for (var id in cart) {
+            out += `<button data-id="${id}" class="del-goods">x</button>`;
+            out += `<img src="img/${goods[id].img}">`;
+            out += ` ${goods[id].name  } : `;
+            out += `<button data-id="${id}" class="dec-goods">-</button> ${cart[id]  }`;
+            out += `<button data-id="${id}" class="inc-goods">+</button> На суммму: `;
+            out += cart[id] * goods[id].cost1;
+            out += '<br>'
+        }
 
-            console.log(cart);
-            $('.main-cart').html(out);
-            $('.del-goods').on('click', delGoods);
-            $('.dec-goods').on('click', decGoods);
-            $('.inc-goods').on('click', incGoods);
+        out += '-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=- <br>'
+            //out += '<a href=".">На главную</a>'
+
+        console.log(cart);
+        $('.main-cart').html(out);
+        $('.del-goods').on('click', delGoods);
+        $('.dec-goods').on('click', decGoods);
+        $('.inc-goods').on('click', incGoods);
 
         //};
     }
@@ -57,20 +59,22 @@ function delGoods() {
     saveCart();
     showCart();
 };
+
 function decGoods() {
     //удаляем товар из корзины
     var id = $(this).attr('data-id');
     if (cart[id] < 1) {
-      delete cart[id];
+        delete cart[id];
         saveCart();
         showCart();
     } else {
-      cart[id]--;
-      saveCart();
-      showCart();  
+        cart[id]--;
+        saveCart();
+        showCart();
     }
 
 };
+
 function incGoods() {
     //удаляем товар из корзины
     var id = $(this).attr('data-id');
@@ -87,9 +91,10 @@ function saveCart() {
 function isEmpty(object) {
     //проверка корзины на пустоту
     for (var key in object)
-    if (object.hasOwnProperty(key)) return true;
+        if (object.hasOwnProperty(key)) return true;
     return false;
 }
+
 function saveJData(jdata) {
     localStorage.setItem('jdata', JSON.stringify(jdata));
 };
@@ -97,6 +102,36 @@ function saveJData(jdata) {
 function loadJData(key) {
     if (localStorage.getItem(key)) {
         keydata = JSON.parse(localStorage.getItem(key));
-       return keydata;
+        return keydata;
+    }
+};
+
+function sendEmail() {
+    var ename = $('#ename').val();
+    var email = $('#email').val();
+    var ephone = $('#ephone').val();
+    if (ename != '' && email != '' && ephone != '') {
+        if (isEmpty(cart)) {
+            $.post(
+                "core/mail.php", {
+                    "ename": ename,
+                    "email": email,
+                    "ephone": ephone,
+                    "cart": cart
+                },
+                function(data) {
+                    if (data==1) {
+                        alert('Заказ отправлен');
+                } else {
+                        alert('Ошибка при отправке заказа');
+                        }; 
+                   }     
+                )}
+        else {
+            alert('Корзина пуста');
+        }
+
+    } else {
+        alert('Заполните все поля!');
     }
 }
