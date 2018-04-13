@@ -10,6 +10,13 @@ switch ($action) {
      case 'selectOneGoods' :
      selectOneGoods();
      break;
+     case 'updateGoods' :
+     updateGoods();
+     break;
+     case 'newGoods' :
+     newGoods();
+     break;
+
     //     echo "i равно 1";
     //     break;
     // case 2:
