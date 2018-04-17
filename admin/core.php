@@ -16,7 +16,9 @@ switch ($action) {
      case 'newGoods' :
      newGoods();
      break;
-
+     case 'loadGoods' :
+     loadGoods();
+     break;
     //     echo "i равно 1";
     //     break;
     // case 2:

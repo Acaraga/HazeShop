@@ -320,9 +320,18 @@ margin-bottom: 20px;
 	color: white;
 	margin-left: 16px;
 }
-.haze_item .red_border .item_form .row .vol-white:hover {
-	background-color: #ED1C24;
+.haze_item .red_border .item_form .row .vol-white .red-select {
+	width: 82px;
+	height: 31px;
+	border-radius: 0;
+    background: transparent;
+    padding: 5px;
+    border: 0;
+    font-size: 16px;
+    line-height: 1;
+    color: white;
 	transition: 1s all;
+
 }
 .haze_item .red_border .item_form .right-wr {
 	width: 40%;
@@ -343,6 +352,7 @@ margin-bottom: 20px;
 	text-align: center;
 	font-weight: bold;
 	font-size: 16px;
+	text-decoration: line-through;
 }
 .haze_item .red_border .item_form .right-wr .price-red{
 	width: 90px;

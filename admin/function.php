@@ -96,3 +96,21 @@ function writeJSON() {
 	mysqli_close($conn);
 
 }
+function loadGoods() {
+	$conn = connect();
+	$sql = "SELECT * FROM goods";
+	$result = mysqli_query($conn, $sql);
+	if (mysqli_num_rows ($result) > 0) {
+		//echo('ok: '.mysqli_num_rows ($result)." rows");
+		$out = array() ;
+		while ($row = mysqli_fetch_assoc($result)) {
+			$out[$row["id"]] = $row;
+		};
+		$a = json_encode($out);
+		echo $a;
+	} else {
+		echo "0";
+	}
+	mysqli_close($conn);
+
+}
