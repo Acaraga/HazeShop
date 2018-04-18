@@ -5,25 +5,28 @@ $(document).ready(function() {
 });
 
 function incQnt() {
-    //удаляем товар из корзины
+    //increase item qnt
     var id = $(this).attr('data-id');
-      console.log(id);
-    var qnt = $('.qnt_input[id$=id]').val();
+      //console.log(id);
+    var qnt = $('.qnt_input#'+id).text();
+    //console.log(qnt);
     qnt++;
-    console.log(qnt);
+    $('.qnt_input#'+id).text(qnt);
+    
 };
 
 function decQnt() {
-    //удаляем товар из корзины
+ 
+    //increase item qnt
     var id = $(this).attr('data-id');
-    if (cart[id] < 1) {
-        delete cart[id];
-        saveCart();
-        showCart();
-    } else {
-        cart[id]--;
-        saveCart();
-        showCart();
-    }
+      //console.log(id);
+    var qnt = $('.qnt_input#'+id).text();
+    //console.log(qnt);
+    if (qnt>1) {
+            qnt--;
+            $('.qnt_input#'+id).text(qnt);
+        }
+    };
+    
 
-};
+

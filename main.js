@@ -71,15 +71,15 @@ function goodsOut(data) {
         out += '		<div class="row">'
         out += '			<div class="left-wr">'
         out += '				<p>Крепость:</p>'
-        out += `				<div class="vol-gray"></div> <div class="vol-white"><select class="red-select" data-id="${data[key].id}"><option>${data[key].conc1} МГ.</option><option>${data[key].conc2} МГ.</option></select></div>`
+        out += `				<div class="vol-gray"></div> <div class="vol-white concentration"><select class="red-select" data-id="${data[key].id}"><option>${data[key].conc1} МГ.</option><option>${data[key].conc2} МГ.</option></select></div>`
         out += '			</div>'
         out += '			<div class="mid-wr">'
         out += '				<p>Объем:</p>'
-        out += `				<div class="vol-gray"></div> <div class="vol-white"><select class="red-select" data-id="${data[key].id}"><option>${data[key].vol1} мл</option><option>${data[key].vol2} мл</option></select></div>`
+        out += `				<div class="vol-gray"></div> <div class="vol-white volume"><select class="red-select" data-id="${data[key].id}"><option>${data[key].vol1} мл</option><option>${data[key].vol2} мл</option></select></div>`
         out += '			</div>'
         out += '			<div class="right-wr"><p>Цена:</p>'
         out += `			<div class="price-black"></div> <div class="price-red"></div>`
-        out += `			<div class="price-black">${data[key].cost} P.</div> <div class="price-red">${data[key].cost} P.</div>`
+        out += `			<div class="price-black">${data[key].cost} P.</div> <div class="price-red">${data[key].cost1} P.</div>`
         out += '		</div>'
         out += '	</div>'
         out += '	<div class="end-wr">'
@@ -96,6 +96,8 @@ function goodsOut(data) {
     $('.add-to-cart').on('click', addToCart);
     $('.dec_btn').on('click', decQnt);
     $('.inc_btn').on('click', incQnt);
+    $('.concentration > select.red-select').on('change', concChange);
+    $('.volume > select.red-select').on('change', volChange);
     saveJData(data);
 };
 
@@ -106,10 +108,11 @@ var cart = {};
 function addToCart() {
     //event.preventDefault();
     var id = $(this).attr('data-id');
+    var qnt = $('.qnt_input#'+id).text()
     if (cart[id] == undefined) {
-        cart[id] = 1;
+        cart[id] = parseFloat(qnt);
     } else {
-        cart[id]++;
+        cart[id] += parseFloat(qnt);
     }
     console.log(cart);
     showMiniCart();
@@ -124,10 +127,8 @@ function showMiniCart() {
     for (var key in cart) {
         count += 1;
         //summ += data[key].cost1;
-
-
     }
-    out = `<p>В корзине ${count} поз.</p> <p>На сумму: ${summ} руб.`;
+    out = `<p>В корзине ${count} поз.</p> <p>Сумма: ${getTotalSumm()} Р.`;
     $('.cart_wrap').html(out);
     $('.cart_wrap').on('click', function() {
         console.log(cart);
@@ -148,9 +149,33 @@ function saveJData(jdata) {
     localStorage.setItem('jdata', JSON.stringify(jdata));
 };
 
-function loadJData() {
-    if (localStorage.getItem('jdata')) {
-        cart = JSON.parse(localStorage.getItem('jdata'));
-       
+function loadJData(key) {
+    if (localStorage.getItem(key)) {
+        keydata = JSON.parse(localStorage.getItem(key));
+        return keydata;
     }
+};
+function getTotalSumm (object) {
+    // if (localStorage.getItem('cart')) {
+    // 	cart = localStorage.getItem('cart');
+    	loadJData();
+        var totalSumm = 0;
+        var goods = loadJData('jdata');
+        for (var id in cart) {
+                totalSumm += cart[id] * goods[id].cost1;
+            }
+            //totalSumm = -1;
+        
+        return totalSumm;
 }
+function concChange() {
+	 var id = $(this).attr('data-id');
+	console.log('concChange'+$(this).prop('selectedIndex'));
+}
+function volChange() {
+	// var goods = loadJData('jdata');
+	//  var id = $(this).attr('option:selected');
+	//  var did = $(this > "option:selected").attr('data-id');
+	console.log($(this).prop('selectedIndex'));
+}
+//var id = $('.goods-out select option:selected').attr('data-id');

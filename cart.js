@@ -19,6 +19,18 @@ function loadCart() {
     }
 }
 
+function getTotalSumm() {
+    if (localStorage.getItem('cart')) {
+        var totalSumm = 0;
+        var goods = loadJData('jdata');
+        for (var id in cart) {
+                totalSumm += cart[id] * goods[id].cost1;
+            }
+            //totalSumm = -1;
+        }
+        return totalSumm;
+}
+
 function showCart() {
     //вывод корзины
     console.log('Showcart');
@@ -27,6 +39,7 @@ function showCart() {
     } else {
         //$.getJSON('goods.json', function (data) {
         var goods = loadJData('jdata');
+        var totalSumm = 0;
         console.log(goods);
         var out = '<h1>Корзина</h1>';
         for (var id in cart) {
@@ -37,12 +50,12 @@ function showCart() {
             out += `<button data-id="${id}" class="inc-goods">+</button> На суммму: `;
             out += cart[id] * goods[id].cost1;
             out += '<br>'
+            totalSumm += cart[id] * goods[id].cost1;
         }
 
         out += '-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=- <br>'
-            //out += '<a href=".">На главную</a>'
-
-        console.log(cart);
+            out += 'Всего в корзине на суммму: ' + getTotalSumm() ;
+        //console.log( );
         $('.main-cart').html(out);
         $('.del-goods').on('click', delGoods);
         $('.dec-goods').on('click', decGoods);
