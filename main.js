@@ -71,15 +71,15 @@ function goodsOut(data) {
         out += '		<div class="row">'
         out += '			<div class="left-wr">'
         out += '				<p>Крепость:</p>'
-        out += `				<div class="vol-gray"></div> <div class="vol-white concentration"><select class="red-select" data-id="${data[key].id}"><option>${data[key].conc1} МГ.</option><option>${data[key].conc2} МГ.</option></select></div>`
+        out += `				<div class="vol-gray"></div> <div class="vol-white concentration"><select class="red-select" data-id="${data[key].id}"><option>${data[key].conc0} МГ.</option><option>${data[key].conc1} МГ.</option><option>${data[key].conc2} МГ.</option></select></div>`
         out += '			</div>'
         out += '			<div class="mid-wr">'
         out += '				<p>Объем:</p>'
-        out += `				<div class="vol-gray"></div> <div class="vol-white volume"><select class="red-select" data-id="${data[key].id}"><option>${data[key].vol1} мл</option><option>${data[key].vol2} мл</option></select></div>`
+        out += `				<div class="vol-gray"></div> <div class="vol-white volume"><select class="red-select" data-id="${data[key].id}"><option>${data[key].vol0} мл</option><option>${data[key].vol1} мл</option></select></div>`
         out += '			</div>'
         out += '			<div class="right-wr"><p>Цена:</p>'
         out += `			<div class="price-black"></div> <div class="price-red"></div>`
-        out += `			<div class="price-black">${data[key].cost} P.</div> <div class="price-red">${data[key].cost1} P.</div>`
+        out += `			<div class="price-black" data-id="${data[key].id}"></div> <div class="price-red" data-id="${data[key].id}">${data[key].cost0} P.</div>`
         out += '		</div>'
         out += '	</div>'
         out += '	<div class="end-wr">'
@@ -104,17 +104,35 @@ function goodsOut(data) {
 
 
 var cart = {};
+var volArr = {};
+var conc = {};
 
 function addToCart() {
     //event.preventDefault();
     var id = $(this).attr('data-id');
     var qnt = $('.qnt_input#'+id).text()
+    //var
+    var conc = ($('.vol-white.concentration>select.red-select[data-id='+id+']').prop('selectedIndex'));
+    var v = ($('.vol-white.volume>select.red-select[data-id='+id+']').prop('selectedIndex'));
+    
+    console.log(conc, v);
+
     if (cart[id] == undefined) {
         cart[id] = parseFloat(qnt);
+        volArr[id] = { 
+            v: v,
+            conc: conc
+        };
+        
+
     } else {
         cart[id] += parseFloat(qnt);
+        volArr[id] = { 
+            v: v,
+            conc: conc
+        };
     }
-    console.log(cart);
+    console.log(volArr);
     showMiniCart();
     saveCart();
     //return true;
@@ -170,12 +188,22 @@ function getTotalSumm (object) {
 }
 function concChange() {
 	 var id = $(this).attr('data-id');
-	console.log('concChange'+$(this).prop('selectedIndex'));
+     var conc = ($('.vol-white.concentration>select.red-select[data-id='+id+']').prop('selectedIndex'));
+	console.log('conc='+conc);
 }
 function volChange() {
-	// var goods = loadJData('jdata');
-	//  var id = $(this).attr('option:selected');
-	//  var did = $(this > "option:selected").attr('data-id');
-	console.log($(this).prop('selectedIndex'));
+	// Выбор объема жидкости и изм. цены на форме
+	var id = $(this).attr('data-id');
+	var v = ($('.vol-white.volume>select.red-select[data-id='+id+']').prop('selectedIndex'));
+	var cost = 0;
+    var goods = loadJData('jdata');
+    switch (v) {
+    case 0: 
+        var cost = goods[id].cost0;
+        break;
+    case 1: 
+        var cost = goods[id].cost1;
+        break;
+    }
+    $('.price-red[data-id='+id+']').text(cost +' Р.');
 }
-//var id = $('.goods-out select option:selected').attr('data-id');
