@@ -114,25 +114,21 @@ function addToCart() {
     //var
     var conc = ($('.vol-white.concentration>select.red-select[data-id='+id+']').prop('selectedIndex'));
     var v = ($('.vol-white.volume>select.red-select[data-id='+id+']').prop('selectedIndex'));
-    
-    console.log(conc, v);
+    // ================================
+    // cv_id -> 2 1 001
+    // where 2 - concentration, 1 - volume, 001 - id from goods table
+    // ================================
+    var cv_id = (conc*10000) + (v*1000) + parseInt(id);
+    console.log("cv_id: " + cv_id);
 
-    if (cart[id] == undefined) {
-        cart[id] = parseFloat(qnt);
-        volArr[id] = { 
-            v: v,
-            conc: conc
-        };
-        
+    if (cart[cv_id] == undefined) {
+        cart[cv_id] = parseFloat(qnt);
 
     } else {
-        cart[id] += parseFloat(qnt);
-        volArr[id] = { 
-            v: v,
-            conc: conc
-        };
+        cart[cv_id] += parseFloat(qnt);
+
     }
-    console.log(volArr);
+    //console.log(volArr);
     showMiniCart();
     saveCart();
     //return true;
@@ -179,8 +175,19 @@ function getTotalSumm (object) {
     	loadJData();
         var totalSumm = 0;
         var goods = loadJData('jdata');
-        for (var id in cart) {
-                totalSumm += cart[id] * goods[id].cost1;
+        for (var cv_id in cart) {
+                var id = parseInt(cv_id % 1000);
+                var c = parseInt((cv_id / 10000));
+                var v = parseInt((cv_id % 10000 / 1000)) ;
+                switch (v) {
+                    case 0: 
+                        totalSumm += cart[cv_id] * goods[id].cost0;
+                        break;
+                    case 1: 
+                        totalSumm += cart[cv_id] * goods[id].cost1;
+                        break;
+                    }
+                
             }
             //totalSumm = -1;
         

@@ -1,4 +1,7 @@
+* {    font-family: 'Roboto', sans-serif;
+}
 .cart {
+    font-family: 'Roboto', sans-serif;
     width: 250px;
     height: 340px;
     border: 1px solid black;
@@ -42,4 +45,24 @@
 }
 .main-cart img {
     width: 48px;
+}
+.flex-table .row {
+    width: 90%;
+    min-height: 100px;
+    background-color: yellow;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.flex-table .row .col{
+    
+    text-align: left;
+}
+.row img {
+    width: 48px;
+ .col-white {
+    width: 100px;
+    height: 100px;
+    background-color: white;
 }
