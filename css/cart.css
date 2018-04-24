@@ -1,4 +1,13 @@
 * {    font-family: 'Roboto', sans-serif;
+
+}
+body {
+    background-color: #eee;
+}
+main, footer{
+    margin: 3%;
+    border-bottom: 1px dotted black;
+    background-color: white;
 }
 .cart {
     font-family: 'Roboto', sans-serif;
@@ -46,18 +55,24 @@
 .main-cart img {
     width: 48px;
 }
+.flex-table-hidden-header {
+    display: none;
+}
+.flex-table {
+    padding: 25px;
+}
 .flex-table .row {
     width: 90%;
     min-height: 100px;
-    background-color: yellow;
+    border-bottom: 1px solid #eee;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
 }
-.flex-table .row .col{
-    
-    text-align: left;
+.col-40{
+    width: 460px;
+    background-color: aqua;
 }
 .row img {
     width: 48px;

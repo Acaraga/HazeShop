@@ -1,49 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="cart.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-			<script src="cart.js"></script>
-</head>
-<body>
-<header></header>
-<main>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/cart.css">
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <title>Корзина</title>
+  </head>
+  <body>
+    <main>
     <h1>Корзина</h1>
-    <div class="flex-table">
+    <div class="flex-table-hidden-header">
         <div class="row">
-            <div class="col"><p>.:.</p></div>
-            <div class="col"><p>Наименование</p></div>
-            <div class="col"><p>Крепость</p></div>
+            <div class="col-md-2"><p>Фото</p></div>
+            <div class="col-md-4"><p>Наименование</p></div>
+<!--             <div class="col"><p>Крепость</p></div>
             <div class="col"><p>Объем</p></div>
-            <div class="col"><p>Цена</p></div>
-            <div class="col"><p>Кол-во</p></div>
-            <div class="col"><p>Стоимость</p></div>
-            <div class="col">Удалить</div>
+-->         <div class="col-md-1"><p>Цена</p></div>
+            <div class="col-md-2"><p>Кол-во</p></div>
+            <div class="col-md-2"><p>Стоимость</p></div>
+            <div class="col-md-1"><p>Удалить</p></div>
         </div>
-        
     </div>
+    <div class="flex-table"> Пустая корзина тут </div>
 
-    <div class="main-cart"> </div>
+    <!-- <div class="main-cart"> </div> -->
 
-    <div class="email-field">
-    	<p>Имя: <input type="text" id="ename"></p>
-	 	<p>Email: <input type="text" id="email"></p>
-	 	<p>Телефон: <input type="text" id="ephone"></p>
-	 	<p><button class="send-email">ЗАКАЗАТЬ</button></p>
+<div class="form-group col-md-4 email-field">
+    <label for="formGroupExampleInput">Имя:</label> <input type="text" class="form-control" id="ename"><br>
+    <label for="formGroupExampleInput">Email: </label><input type="text" class="form-control" id="email"><br>
+    <label for="formGroupExampleInput">Телефон: </label><input type="text" class="form-control" id="ephone"><br>
+        <div class="col-md-4"><br>
+            <p><button class="send-email btn btn-dark">ЗАКАЗАТЬ</button></p>
+            
+        </div>
+    
+</div>
+  
 
-
-   
-
-    </div>
 </main>
 <footer>
-	<a href=".">На главную</a>
+    <a href=".">На главную</a>
 
 </footer>
 
-</body>
+    <!-- Optional JavaScript -->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script src="js/cart.js"></script>
+  </body>
 </html>
+			

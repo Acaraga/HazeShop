@@ -51,28 +51,28 @@ function showCart() {
             var c = parseInt((cv_id / 10000));
             var v = parseInt((cv_id % 10000 / 1000)) ;
             out2 += '<div class="row">';
-            out2 += `<div class="col"><img src="img/${goods[id].img}"></div>`;
-            out2 += `<div class="col"><p>${goods[id].name  }</p></div>`;
-            out2 += `<div class="col"><p>${getConcByCvid(cv_id)} мг.</p></div>`;
-            out2 += `<div class="col"><p>${getVolByCvid(cv_id)} мл.</p></div>`;
+            out2 += `<div class="col-md-2"><img src="img/${goods[id].img}"></div>`;
+            out2 += `<div class="col-md-4"><p>${goods[id].name} ${getConcByCvid(cv_id)}мг ${getVolByCvid(cv_id)}мл</p></div>`;
+            // out2 += `<div class="col"><p>${getConcByCvid(cv_id)} мг.</p></div>`;
+            // out2 += `<div class="col"><p>${getVolByCvid(cv_id)} мл.</p></div>`;
             switch (v) {
                 case 0: 
-                    out2 += `<div class="col"><p>${goods[id].cost0}</p></div>`; 
-                    out2 += `<div class="col"><p><button data-id="${cv_id}" class="dec-goods">-</button>${cart[cv_id]}`;
-                    out2 += `<button data-id="${cv_id}" class="inc-goods">+</button></p></div>`;
-                    out2 += `<div class="col"><p>${(cart[cv_id] * goods[id].cost0)}</p></div>`;
+                    out2 += `<div class="col-md-1"><p>${goods[id].cost0}</p></div>`; 
+                    out2 += `<div class="col-md-2"><p><button data-id="${cv_id}" class="dec-goods  btn btn-outline-warning">-</button>${cart[cv_id]}`;
+                    out2 += `<button data-id="${cv_id}" class="inc-goods btn btn-outline-success">+</button></p></div>`;
+                    out2 += `<div class="col-md-2"><p>${(cart[cv_id] * goods[id].cost0)}</p></div>`;
                     totalSumm2 += cart[cv_id] * goods[id].cost0;
                     break;
                 case 1: 
-                    out2 += `<div class="col"><p>${goods[id].cost1}</p></div>`; 
-                    out2 += `<div class="col"><p><button data-id="${cv_id}" class="dec-goods">-</button>${cart[cv_id]}`;
-                    out2 += `<button data-id="${cv_id}" class="inc-goods">+</button></p></div>`;
-                    out2 += `<div class="col"><p>${(cart[cv_id] * goods[id].cost1)}</p></div>`;
+                    out2 += `<div class="col-md-1"><p>${goods[id].cost1}</p></div>`; 
+                    out2 += `<div class="col-md-2"><p><button data-id="${cv_id}" class="dec-goods btn btn-outline-warning">-</button>${cart[cv_id]}`;
+                    out2 += `<button data-id="${cv_id}" class="inc-goods btn btn-outline-success">+</button></p></div>`;
+                    out2 += `<div class="col-md-2"><p>${(cart[cv_id] * goods[id].cost1)}</p></div>`;
                     totalSumm2 += cart[cv_id] * goods[id].cost1;
                     break;
                 }
             
-            out2 += `<button data-id="${cv_id}" class="del-goods">x</button>`;
+            out2 += `<div class="col-md-1"><p><button data-id="${cv_id}" class="del-goods btn btn-danger">x</button></p></div>`;
         
             out2 += `</div>` // div "row" ends
 
@@ -101,9 +101,9 @@ function showCart() {
         out += '-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=- <br>'
             out += 'Всего в корзине на суммму: ' + totalSumm ;
         //console.log( );
-        var oout = $('.flex-table').html() + out2;
+        var oout = $('.flex-table-hidden-header').html() + out2;
         $('.flex-table').html(oout);
-        $('.main-cart').html(out);
+        //$('.main-cart').html(out);
         $('.del-goods').on('click', delGoods);
         $('.dec-goods').on('click', decGoods);
         $('.inc-goods').on('click', incGoods);

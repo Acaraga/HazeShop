@@ -4,38 +4,6 @@
 		"selected_items":
 		[
 			[
-				"ta",
-				"ta\ttext-align: ${1:left};"
-			],
-			[
-				"o",
-				"oout"
-			],
-			[
-				"out",
-				"out2"
-			],
-			[
-				"v",
-				"val"
-			],
-			[
-				"ou",
-				"out2"
-			],
-			[
-				"get",
-				"getConcByCvid"
-			],
-			[
-				"con",
-				"concStr"
-			],
-			[
-				"parse",
-				"parseInt"
-			],
-			[
 				"conc",
 				"conc"
 			],
@@ -136,6 +104,10 @@
 				"click"
 			],
 			[
+				"get",
+				"getItem"
+			],
+			[
 				"add",
 				"addToCart"
 			],
@@ -156,114 +128,47 @@
 	"buffers":
 	[
 		{
-			"file": "hzitem.js",
+			"file": "/C/ospanel/domains/hzshop.loc/index.html",
 			"settings":
 			{
-				"buffer_size": 468,
+				"buffer_size": 3366,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "main.js",
+			"file": "/C/ospanel/domains/hzshop.loc/cart.html",
 			"settings":
 			{
-				"buffer_size": 8633,
+				"buffer_size": 2646,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "cart.js",
+			"file": "/C/ospanel/domains/hzshop.loc/js/cart.js",
 			"settings":
 			{
-				"buffer_size": 7882,
+				"buffer_size": 8140,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "admin/core.php",
+			"file": "/C/ospanel/domains/hzshop.loc/css/style.css",
 			"settings":
 			{
-				"buffer_size": 473,
-				"encoding": "UTF-8",
+				"buffer_size": 8386,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "admin/function.php",
+			"file": "/C/ospanel/domains/hzshop.loc/css/cart.css",
 			"settings":
 			{
-				"buffer_size": 2890,
+				"buffer_size": 1448,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "admin/js/admin.js",
-			"settings":
-			{
-				"buffer_size": 1960,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 3357,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "admin/admin.css",
-			"settings":
-			{
-				"buffer_size": 242,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "cart.css",
-			"settings":
-			{
-				"buffer_size": 1218,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<meta charset=\"UTF-8\">\n\t<title>HZShop admin panel</title>\n\t<link rel=\"stylesheet\" href=\"admin.css\">\n</head>\n<body>\n\t<div class=\"goods-out\"></div>\n\t\n\t<div class=\"flex-table\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col\"><p>Имя</p><input type=\"text\" id=\"gname\"></div>\n\t\t\t<div class=\"col\"><p>Цена</p><input type=\"text\" id=\"gcost\"></div>\n\t\t\t<div class=\"col\"><p>Описание</p><input type=\"textarea\" id=\"gdescr\"></div>\n\t\t\t<div class=\"col\"><p>Изображение</p><input type=\"text\" id=\"gimg\"></div>\n\t\t\t<div class=\"col\"><p>Артикул</p><input type=\"text\" id=\"gord\"></div>\n\t\t\t<div class=\"col-white\"><button class=\"add-to-db\">Обновить</button></div>\n\t\t</div>\n\t</div>\n\t\t<!-- <div class=\"row add-to-db\"><button>Обновить</button></div>\n\t</div> -->\n\t<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>\n\t<script src=\"js/admin.js\"></script>\n\t\t\n</body>\n</html>",
-			"file": "admin/admin.html",
-			"file_size": 1014,
-			"file_write_time": 131681061050962806,
-			"settings":
-			{
-				"buffer_size": 907,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "style.css",
-			"settings":
-			{
-				"buffer_size": 8377,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "cart.html",
-			"settings":
-			{
-				"buffer_size": 1250,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
 			}
 		}
 	],
@@ -283,7 +188,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 428.0
+		"width": 412.0
 	},
 	"console":
 	{
@@ -301,17 +206,31 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/C/ospanel/domains/hzshop.loc",
+		"/C/ospanel/domains/hzshop.loc/css",
+		"/C/ospanel/domains/hzshop.loc/js"
+	],
 	"file_history":
 	[
+		"/C/OSPanel/domains/hzshop.loc/index.html",
+		"/C/OSPanel/domains/hzshop.loc/cart.html",
+		"/C/OSPanel/domains/hzshop.loc/admin/js/admin.js",
 		"/C/OSPanel/domains/hzshop.loc/goods.json",
+		"/C/OSPanel/domains/hzshop.loc/admin/function.php",
+		"/C/OSPanel/domains/hzshop.loc/admin/core.php",
+		"/C/OSPanel/domains/hzshop.loc/cart.js",
 		"/C/OSPanel/domains/hzshop.loc/main.js",
+		"/C/OSPanel/domains/hzshop.loc/hzitem.js",
+		"/C/OSPanel/domains/hzshop.loc/admin/admin.html",
+		"/C/OSPanel/domains/hzshop.loc/admin/admin.css",
+		"/C/OSPanel/domains/hzshop.loc/style.css",
+		"/C/OSPanel/domains/modx.mrnew/assets/sass/main.sass",
 		"/C/Users/JazzAdmin/Downloads/eshop08.ru/1_eshop.ru/admin/js/admin.js",
 		"/C/Users/JazzAdmin/Downloads/eshop08.ru (1)/1_eshop.ru/admin/js/admin.js",
 		"/C/Users/JazzAdmin/Downloads/eshop08.ru (1)/1_eshop.ru/js/main.js",
 		"/C/Users/JazzAdmin/Downloads/eshop08.ru (1)/1_eshop.ru/admin/admin.html",
-		"/C/OSPanel/domains/hzshop.loc/admin/admin.html",
-		"/C/OSPanel/domains/hzshop.loc/cart.html",
-		"/C/OSPanel/domains/hzshop.loc/cart.js",
 		"/C/OSPanel/domains/hzshop.loc/core/mail.php",
 		"/C/Users/JazzAdmin/Downloads/1_eshop.ru/goods.json",
 		"/C/OSPanel/domains/hzshop.loc/my_goods.json",
@@ -325,7 +244,7 @@
 	],
 	"find":
 	{
-		"height": 41.0
+		"height": 40.0
 	},
 	"find_in_files":
 	{
@@ -339,6 +258,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"decQnt",
+			".js",
+			"js",
 			"total",
 			"price-red",
 			"select",
@@ -380,11 +302,106 @@
 			[
 				{
 					"buffer": 0,
-					"file": "hzitem.js",
+					"file": "/C/ospanel/domains/hzshop.loc/index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 468,
+						"buffer_size": 3366,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								427,
+								337
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/ospanel/domains/hzshop.loc/cart.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2646,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1752,
+								1752
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 288.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/ospanel/domains/hzshop.loc/js/cart.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8140,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2215,
+								2215
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 256.0,
+						"translation.y": 972.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 3,
+					"file": "/C/ospanel/domains/hzshop.loc/css/style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8386,
 						"regions":
 						{
 						},
@@ -397,216 +414,8 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "main.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 8633,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								7467,
-								7467
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2970.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "cart.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7882,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1994,
-								1994
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 40.0,
-						"translation.y": 801.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "admin/core.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 473,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								198,
-								67
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "admin/function.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2890,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2828,
-								2828
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 306.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "admin/js/admin.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1960,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								569,
-								569
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3357,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								764,
-								764
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
 							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 1,
-			"sheets":
-			[
-				{
-					"buffer": 7,
-					"file": "admin/admin.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 242,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								94,
-								94
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -616,20 +425,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
-					"file": "cart.css",
+					"buffer": 4,
+					"file": "/C/ospanel/domains/hzshop.loc/css/cart.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1218,
+						"buffer_size": 1448,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1084,
-								1084
+								141,
+								141
 							]
 						],
 						"settings":
@@ -639,99 +448,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 756.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "admin/admin.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 907,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								235,
-								667
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"word_wrap": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 54.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "style.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 8377,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6020,
-								6020
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 5459.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "cart.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1250,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								879,
-								879
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 198.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -765,7 +485,7 @@
 		"cols":
 		[
 			0.0,
-			0.666666666667,
+			0.946524064171,
 			1.0
 		],
 		"rows":
@@ -783,7 +503,7 @@
 	"project": "hzshop.sublime-project",
 	"replace":
 	{
-		"height": 73.0
+		"height": 48.0
 	},
 	"save_all_on_build": true,
 	"select_file":

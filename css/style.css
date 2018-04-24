@@ -74,7 +74,7 @@ ul#menu {
     /*background-color: yellow;*/
 }
 #menu li.active{
-	background: url('img/act-mnu-bg.png') no-repeat 0px -15px;
+	background: url('../img/act-mnu-bg.png') no-repeat 0px -15px;
 
 	
 }
@@ -289,14 +289,14 @@ margin-bottom: 20px;
 .haze_item .red_border .item_form .left-wr {
 	width: 30%;
 	height: 145px;
-	background: url('img/hz-scroll.png') no-repeat 15px 27px;
+	background: url('../img/hz-scroll.png') no-repeat 15px 27px;
 	/*background-color: green;*/
 }
 .haze_item .red_border .item_form .mid-wr {
 	width: 30%;
 	height: 145px;
 	/*background-color: blue;*/
-	background: url('img/hz-scroll.png') no-repeat 15px 27px;
+	background: url('../img/hz-scroll.png') no-repeat 15px 27px;
 }
 
 .haze_item .red_border .item_form .row .vol-gray {
